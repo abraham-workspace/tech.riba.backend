@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import pool from '@app/db/db';
+import pool from '../db/db';
 import asyncHandler from '../middleware/asyncHandler/asyncHandler';
 import { sendMail } from '../utils/helpers/emailService';
 
