@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import pool from '@app/db/db';
-import asyncHandler from '@app/middleware/asyncHandler/asyncHandler';
-import { sendMail } from '@app/utils/helpers/emailService';
+import asyncHandler from '../middleware/asyncHandler/asyncHandler';
+import { sendMail } from '../utils/helpers/emailService';
 
 const REVIEWER_EMAIL = process.env.REVIEWER_EMAIL!;
 
@@ -37,7 +37,7 @@ export const submitConsultation = asyncHandler(async (req: Request, res: Respons
   // Email applicant after 10 minutes
   setTimeout(async () => {
     try {
-      await sendMail(
+      await sendMail( 
         email,
         'Consultation Received',
         `<p>Hello ${full_name},</p>

@@ -3,7 +3,7 @@ setupAliases()
 import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
-import consultantRoutes from "@app/routes/consultantRoutes";
+import consultantRoutes from "../src/routes/consultantRoutes";
 
 // Load environment variables first
 dotenv.config();
