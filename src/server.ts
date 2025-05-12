@@ -1,5 +1,5 @@
-import { setupAliases } from "import-aliases";
-setupAliases()
+// import { setupAliases } from "import-aliases";
+// setupAliases()
 import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
