@@ -21,7 +21,7 @@ export const submitConsultation = asyncHandler(async (req: Request, res: Respons
     ) VALUES ($1, $2, $3, $4, $5, $6) RETURNING *`,
     [organization_name, full_name, phone, email, project_details, terms_accepted]
   );
-
+  
   const inserted = result.rows[0];
 
   // Email reviewer immediately
